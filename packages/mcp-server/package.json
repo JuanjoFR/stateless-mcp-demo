@@ -5,6 +5,7 @@
   "main": "index.js",
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
+    "@types/express": "^5.0.2",
     "@types/node": "^22.15.23",
     "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.5",
@@ -20,5 +21,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }

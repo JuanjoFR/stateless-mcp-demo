@@ -12,5 +12,8 @@
   "workspaces": [
     "packages/mcp-client",
     "packages/mcp-server"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
 }

@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+public
+coverage
+dist
+build
+*.log
+.env*
+!.prettierrc
+!.prettierignore

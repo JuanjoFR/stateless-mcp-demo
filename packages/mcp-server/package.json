@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
+    "@types/chroma-js": "^3.1.1",
     "@types/express": "^5.0.2",
     "@types/node": "^22.15.23",
     "eslint": "^9.27.0",
@@ -26,7 +27,9 @@
   "license": "ISC",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
+    "chroma-js": "^3.1.2",
     "dotenv": "^16.5.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "zod": "^3.25.36"
   }
 }

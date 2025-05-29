@@ -1,7 +1,7 @@
-import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import 'dotenv/config';
 import express, { Request, Response } from 'express';
+import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
+import { server } from './mcp-server.js';
 
 const app = express();
 app.use(express.json());
@@ -12,10 +12,6 @@ app.post('/mcp', async (req: Request, res: Response) => {
   // when multiple clients connect concurrently.
 
   try {
-    const server = new McpServer({
-      name: 'example-server',
-      version: '1.0.0',
-    });
     const transport = new StreamableHTTPServerTransport({
       sessionIdGenerator: undefined,
     });
@@ -70,7 +66,8 @@ app.delete('/mcp', async (req: Request, res: Response) => {
 });
 
 // Start the server
-const PORT = process.env.MCP_SERVER_PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`MCP Stateless Streamable HTTP Server listening on port ${PORT}`);
+app.listen(process.env.MCP_SERVER_PORT, () => {
+  console.log(
+    `MCP Stateless Streamable HTTP Server listening on port ${process.env.MCP_SERVER_PORT}`
+  );
 });

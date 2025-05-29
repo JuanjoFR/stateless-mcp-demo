@@ -2,7 +2,7 @@
   "name": "mcp-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
     "@types/express": "^5.0.2",
@@ -14,15 +14,18 @@
     "typescript-eslint": "^8.33.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "dev": "tsx watch --env-file=.env.local ./src/index.ts",
     "lint": "eslint ./src --ext .ts",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "inspect": "npx @modelcontextprotocol/inspector npm run dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0"
   }

@@ -13,6 +13,8 @@ dist/
 packages/*/dist/
 build/
 packages/*/build/
+tsconfig.tsbuildinfo
+packages/*/tsconfig.tsbuildinfo
 
 # VS Code settings
 .vscode/
